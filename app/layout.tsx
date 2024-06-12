@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 
 import './globals.css'
 import AuthProvider from '@/components/AuthProvider'
+import Footer from './footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,10 @@ const RootLayout: FC<Readonly<Props>> = ({ children }) => {
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<AuthProvider> {children} </AuthProvider>
+				<AuthProvider>
+					{children}
+					<Footer />
+				</AuthProvider>
 			</body>
 		</html>
 	)
