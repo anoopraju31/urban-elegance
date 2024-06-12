@@ -1,10 +1,11 @@
 import { FC } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import AuthProvider from '@/components/AuthProvider'
+import Navbar from '@/components/Navbar'
+import Footer from './footer'
 
 import './globals.css'
-import AuthProvider from '@/components/AuthProvider'
-import Footer from './footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ const RootLayout: FC<Readonly<Props>> = ({ children }) => {
 		<html lang='en'>
 			<body className={inter.className}>
 				<AuthProvider>
+					<Navbar />
 					{children}
 					<Footer />
 				</AuthProvider>
