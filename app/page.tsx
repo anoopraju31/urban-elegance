@@ -1,5 +1,4 @@
 import HeroSection from '@/components/HeroSection'
-import Link from 'next/link'
 import { FC } from 'react'
 
 type Props = {}
