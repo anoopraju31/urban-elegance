@@ -13,7 +13,11 @@ type Props = {}
 const ProductImageCarousel: FC<Props> = (props) => {
 	return (
 		<div className='lg:w-1/2 w-full lg:h-auto h-full relative'>
-			<Carousel>
+			<Carousel
+				opts={{
+					align: 'center',
+					loop: true,
+				}}>
 				<CarouselContent>
 					<CarouselItem>
 						<Image
