@@ -54,9 +54,11 @@ const Navbar: FC = () => {
 					<ToggleTheme />
 				</div>
 
-				<button className='hidden md:inline-flex items-center text-center text-white bg-red-600 border-0 py-1 px-3 focus:outline-none hover:bg-red-700 rounded text-base'>
+				<Link
+					href='/login'
+					className='hidden md:inline-flex items-center text-center text-white bg-red-600 border-0 py-2 px-3 focus:outline-none hover:bg-red-700 rounded text-base'>
 					Sign In
-				</button>
+				</Link>
 
 				<button
 					onClick={toggleMenu}
