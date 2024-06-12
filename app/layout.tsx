@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar'
 import Footer from './footer'
 
 import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,11 +24,13 @@ const RootLayout: FC<Readonly<Props>> = ({ children }) => {
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<AuthProvider>
-					<Navbar />
-					{children}
-					<Footer />
-				</AuthProvider>
+				<ThemeProvider attribute='class' defaultTheme='system'>
+					<AuthProvider>
+						<Navbar />
+						{children}
+						<Footer />
+					</AuthProvider>
+				</ThemeProvider>
 			</body>
 		</html>
 	)
