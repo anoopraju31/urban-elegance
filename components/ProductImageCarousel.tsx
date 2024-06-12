@@ -21,7 +21,7 @@ const ProductImageCarousel: FC<Props> = (props) => {
 							width={500}
 							height={500}
 							className='w-full h-full aspect-square object-cover object-center rounded'
-							src='/placeholder.png'
+							src='/product1.avif'
 						/>
 					</CarouselItem>
 					<CarouselItem>
@@ -30,7 +30,7 @@ const ProductImageCarousel: FC<Props> = (props) => {
 							width={500}
 							height={500}
 							className='w-full h-full aspect-square object-cover object-center rounded'
-							src='/placeholder.png'
+							src='/product2.avif'
 						/>
 					</CarouselItem>
 					<CarouselItem>
@@ -39,7 +39,43 @@ const ProductImageCarousel: FC<Props> = (props) => {
 							width={500}
 							height={500}
 							className='w-full h-full aspect-square object-cover object-center rounded'
-							src='/placeholder.png'
+							src='/product3.avif'
+						/>
+					</CarouselItem>
+					<CarouselItem>
+						<Image
+							alt='ecommerce'
+							width={500}
+							height={500}
+							className='w-full h-full aspect-square object-cover object-center rounded'
+							src='/product4.avif'
+						/>
+					</CarouselItem>
+					<CarouselItem>
+						<Image
+							alt='ecommerce'
+							width={500}
+							height={500}
+							className='w-full h-full aspect-square object-cover object-center rounded'
+							src='/product5.avif'
+						/>
+					</CarouselItem>
+					<CarouselItem>
+						<Image
+							alt='ecommerce'
+							width={500}
+							height={500}
+							className='w-full h-full aspect-square object-cover object-center rounded'
+							src='/product6.avif'
+						/>
+					</CarouselItem>
+					<CarouselItem>
+						<Image
+							alt='ecommerce'
+							width={500}
+							height={500}
+							className='w-full h-full aspect-square object-cover object-center rounded'
+							src='/product7.avif'
 						/>
 					</CarouselItem>
 				</CarouselContent>
