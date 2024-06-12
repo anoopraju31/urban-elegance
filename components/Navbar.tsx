@@ -6,9 +6,11 @@ import Link from 'next/link'
 import { RiCloseLargeFill, RiMenu3Fill } from 'react-icons/ri'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import ToggleTheme from './ToggleTheme'
+import { signOut, useSession } from 'next-auth/react'
 
 const Navbar: FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false)
+	const { data: session } = useSession()
 	const toggleMenu = useCallback(() => setIsMenuOpen((prev) => !prev), [])
 
 	return (
@@ -54,11 +56,19 @@ const Navbar: FC = () => {
 					<ToggleTheme />
 				</div>
 
-				<Link
-					href='/login'
-					className='hidden md:inline-flex items-center text-center text-white bg-red-600 border-0 py-2 px-3 focus:outline-none hover:bg-red-700 rounded text-base'>
-					Sign In
-				</Link>
+				{session && session.user ? (
+					<button
+						onClick={() => signOut()}
+						className='hidden md:inline-flex items-center text-center text-white bg-red-600 border-0 py-2 px-3 focus:outline-none hover:bg-red-700 rounded text-base'>
+						Logout
+					</button>
+				) : (
+					<Link
+						href='/login'
+						className='hidden md:inline-flex items-center text-center text-white bg-red-600 border-0 py-2 px-3 focus:outline-none hover:bg-red-700 rounded text-base'>
+						Sign In
+					</Link>
+				)}
 
 				<button
 					onClick={toggleMenu}
