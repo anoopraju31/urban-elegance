@@ -15,7 +15,7 @@ const Page: FC = () => {
 	if (session && session.user) redirect('/')
 
 	return (
-		<div className='w-full bg-gray-900 lg:grid min-h-[var(--hero-image-height-sm)] lg:grid-cols-2 md:min-h-[var(--hero-image-height-lg)]'>
+		<div className='w-full bg-white dark:bg-gray-900 lg:grid min-h-[var(--hero-image-height-sm)] lg:grid-cols-2 md:min-h-[var(--hero-image-height-lg)]'>
 			<div className='flex items-center justify-center py-12'>
 				<div className='mx-auto grid w-[350px] gap-6'>
 					<div className='grid gap-2 text-center'>
@@ -34,6 +34,7 @@ const Page: FC = () => {
 								type='email'
 								placeholder='m@example.com'
 								required
+								className='bg-white dark:bg-gray-900'
 							/>
 						</div>
 						<div className='grid gap-2'>
@@ -47,6 +48,7 @@ const Page: FC = () => {
 								type='password'
 								placeholder='password'
 								required
+								className='bg-white dark:bg-gray-900'
 							/>
 						</div>
 						<Button type='submit' className='w-full'>
@@ -61,7 +63,7 @@ const Page: FC = () => {
 						<Button
 							onClick={() => signIn('google')}
 							variant='outline'
-							className='w-full bg-red-500'>
+							className='w-full text-white bg-red-500'>
 							Login with Google
 						</Button>
 					</div>
