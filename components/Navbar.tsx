@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { RiCloseLargeFill, RiMenu3Fill } from 'react-icons/ri'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import ToggleTheme from './ToggleTheme'
 
 const Navbar: FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false)
@@ -48,6 +49,11 @@ const Navbar: FC = () => {
 						Contact
 					</Link>
 				</nav>
+
+				<div className='mr-5 hidden md:block'>
+					<ToggleTheme />
+				</div>
+
 				<button className='hidden md:inline-flex items-center text-center text-white bg-red-600 border-0 py-1 px-3 focus:outline-none hover:bg-red-700 rounded text-base'>
 					Sign In
 				</button>
@@ -84,6 +90,8 @@ const Navbar: FC = () => {
 								className='w-full py-1 px-3 text-center rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100'>
 								Contact
 							</Link>
+
+							<ToggleTheme />
 
 							<button className='w-full my-2 flex items-center justify-center text-white bg-red-600 border-0 py-1 px-3 focus:outline-none hover:bg-red-700 rounded text-base'>
 								Sign In
