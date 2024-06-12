@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--product-img-carousel-button-top: calc(50% - 16px);
+	--product-img-carousel-button-diameter: 2.5em;
+	--product-img-carousel-button-radius: 1.25em;
+}
