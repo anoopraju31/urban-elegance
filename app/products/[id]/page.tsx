@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import { FC } from 'react'
 import { FaHeart, FaStar } from 'react-icons/fa'
+import ProductImageCarousel from '@/components/ProductImageCarousel'
 
 type Props = {}
 
@@ -10,18 +10,7 @@ const page: FC<Props> = (props) => {
 			<div className='container px-5 py-24 mx-auto'>
 				<div className='lg:w-4/5 mx-auto flex flex-wrap relative'>
 					{/* Image Carousel */}
-					<section className='lg:w-1/2 w-full lg:h-auto h-full relative'>
-						<Image
-							alt='ecommerce'
-							width={500}
-							height={500}
-							className='w-full h-full aspect-square object-cover object-center rounded'
-							src='/placeholder.png'
-						/>
-
-						<div className='absolute -left-[var(--product-img-carousel-button-radius)] top-[var(--product-img-carousel-button-top)] w-[var(--product-img-carousel-button-diameter)] h-[var(--product-img-carousel-button-diameter)] rounded-full bg-gray-200 dark:bg-gray-800/50'></div>
-						<div className='absolute -right-[var(--product-img-carousel-button-radius)] top-[var(--product-img-carousel-button-top)] w-[var(--product-img-carousel-button-diameter)] h-[var(--product-img-carousel-button-diameter)] rounded-full bg-gray-200 dark:bg-gray-800/50'></div>
-					</section>
+					<ProductImageCarousel />
 
 					<section className='lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0'>
 						<h2 className='text-sm title-font text-gray-500 tracking-widest'>
@@ -124,21 +113,6 @@ const page: FC<Props> = (props) => {
 				</div>
 			</div>
 		</main>
-	)
-}
-
-const Star = () => {
-	return (
-		<svg
-			fill='currentColor'
-			stroke='currentColor'
-			stroke-linecap='round'
-			stroke-linejoin='round'
-			stroke-width='2'
-			className='w-4 h-4 text-yellow-500'
-			viewBox='0 0 24 24'>
-			<path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'></path>
-		</svg>
 	)
 }
 
