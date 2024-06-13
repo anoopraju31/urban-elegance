@@ -3,7 +3,7 @@ import ProductCard from './ProductCard1'
 
 const meta: Meta<typeof ProductCard> = {
 	component: ProductCard,
-	title: 'ProductCard',
+	title: 'ProductCard1',
 }
 
 export default meta
