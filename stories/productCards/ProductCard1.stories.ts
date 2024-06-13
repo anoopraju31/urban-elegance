@@ -16,6 +16,7 @@ export const Base: Story = {
 			'https://www.beyoung.in/api/cache/catalog/products/new_chinos_update_image_23_9_2022/wood_brown_chinos_for_men_base_05_06_2023_400x533.jpg',
 			'https://www.beyoung.in/api/cache/catalog/products/new_chinos_update_image_23_9_2022/camel_beige_chinos_for_men_full_view_25_1_2023_400x533.jpg',
 		],
+		isHoverableImg: false,
 		title: 'Black Mens Chino Pants',
 		category: 'Chino Pants',
 		discountedPrice: 998,

@@ -4,6 +4,7 @@ import { FaHeart } from 'react-icons/fa6'
 
 type Props = {
 	img: string[]
+	isHoverableImg?: boolean
 	title: string
 	category: string
 	price: number
@@ -18,6 +19,7 @@ type Props = {
 
 const ProductCard1: FC<Props> = ({
 	img,
+	isHoverableImg,
 	title,
 	category,
 	price,
@@ -37,16 +39,18 @@ const ProductCard1: FC<Props> = ({
 					alt={title}
 					width={300}
 					height={400}
-					className='w-full object-cover rounded-md group-hover:hidden transition-all duration-500 ease-in-out'
+					className={`w-full object-cover rounded-md ${isHoverableImg && 'group-hover:hidden'} transition-all duration-500 ease-in-out`}
 				/>
 
-				<Image
-					src={img[1]}
-					alt={title}
-					width={300}
-					height={400}
-					className='hidden w-full object-cover rounded-md group-hover:inline-block transition-all duration-500 ease-in-out'
-				/>
+				{isHoverableImg && (
+					<Image
+						src={img[1]}
+						alt={title}
+						width={300}
+						height={400}
+						className='hidden w-full object-cover rounded-md group-hover:inline-block transition-all duration-500 ease-in-out'
+					/>
+				)}
 
 				<div className='absolute top-4 right-4 w-8 h-8 rounded-full bg-white text-red-500 flex justify-center items-center'>
 					<FaHeart />
