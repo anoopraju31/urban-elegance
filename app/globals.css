@@ -291,3 +291,7 @@ badge::after {
 	border-top-width: 10px;
 	border-top: 10px solid #ff9900;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
