@@ -15,7 +15,7 @@ const ProductRadioInput: FC<Props> = ({
 	...rest
 }) => {
 	return (
-		<div className='flex'>
+		<div className='flex gap-2'>
 			<div className='flex items-center h-5'>
 				<input
 					id={id}
