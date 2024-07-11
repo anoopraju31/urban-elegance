@@ -2,7 +2,7 @@ import { type FC } from 'react'
 import Cart from './_components/cart'
 import RelatedProducts from './_components/relatedProducts'
 import PaymentCheckoutSummary from '@/components/paymentCheckoutSummary'
-import VoucherForm from './_components/voucherForm'
+import VoucherForm from '../../components/voucherForm'
 
 const CartPage: FC = () => {
 	return (
