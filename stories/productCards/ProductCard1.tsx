@@ -68,7 +68,7 @@ const ProductCard1: FC<ProductCardProps> = (props) => {
 				</div>
 
 				{badge && (
-					<div className='absolute top-0 left-0 px-2 py-1 text-xs text-white bg-red-500 rounded-br-md'>
+					<div className='absolute top-0 left-0 px-2 py-1 text-xs text-white bg-red-500 rounded-br-md badge'>
 						{badge}
 					</div>
 				)}
