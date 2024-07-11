@@ -8,6 +8,8 @@ import { FaRegHeart, FaShoppingCart, FaRegUser } from 'react-icons/fa'
 import { RiCloseLargeFill, RiMenu3Fill } from 'react-icons/ri'
 import ToggleTheme from '../ToggleTheme'
 import { signOut, useSession } from 'next-auth/react'
+import { navItems } from './data'
+import NavItem from './navItem'
 
 const Navbar: FC = () => {
 	const { data: session } = useSession()
@@ -86,13 +88,13 @@ const Navbar: FC = () => {
 				</div>
 			</div>
 
-			{/* <nav className='py-2 border-b border-gray-100 hidden md:block relative'>
-					<div className='max-w-7xl w-full mx-auto px-6 flex items-center overflow-x-auto no-scrollbar'>
-						{navItems.map((item) => (
-							<NavItem key={item.id} {...item} />
-						))}
-					</div>
-				</nav> */}
+			<nav className='py-2 border-b border-gray-100 dark:border-gray-800 hidden md:block relative'>
+				<div className='max-w-7xl w-full mx-auto px-6 flex items-center overflow-x-auto no-scrollbar'>
+					{navItems.map((item) => (
+						<NavItem key={item.id} {...item} />
+					))}
+				</div>
+			</nav>
 		</header>
 	)
 }
