@@ -2,11 +2,11 @@ import { FC } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import AuthProvider from '@/components/AuthProvider'
-import Navbar from '@/components/Navbar'
 import Footer from './footer'
 
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import Navbar from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
