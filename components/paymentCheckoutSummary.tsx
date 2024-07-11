@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import { FC } from 'react'
 import { IoArrowForward } from 'react-icons/io5'
 
 type Props = {
-	next: string
+	next: 'Payment' | 'Checkout'
 }
 
 const PaymentCheckoutSummary: FC<Props> = ({ next }) => {
@@ -59,24 +60,25 @@ const PaymentCheckoutSummary: FC<Props> = ({ next }) => {
 				</dl>
 			</div>
 
-			<a
+			<Link
 				href='#'
 				className='flex w-full items-center justify-center rounded-lg bg-green-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800'>
 				Proceed to {next}
-			</a>
+			</Link>
 
-			<div className='flex items-center justify-center gap-2'>
-				<span className='text-sm font-normal text-gray-500 dark:text-gray-400'>
-					or
-				</span>
-				<a
-					href='#'
-					title=''
-					className='inline-flex items-center gap-2 text-sm font-medium text-green-700 underline hover:no-underline dark:text-green-500'>
-					Continue Shopping
-					<IoArrowForward />
-				</a>
-			</div>
+			{next === 'Checkout' && (
+				<div className='flex items-center justify-center gap-2'>
+					<span className='text-sm font-normal text-gray-500 dark:text-gray-400'>
+						or
+					</span>
+					<Link
+						href='/'
+						className='inline-flex items-center gap-2 text-sm font-medium text-green-700 underline hover:no-underline dark:text-green-500'>
+						Continue Shopping
+						<IoArrowForward />
+					</Link>
+				</div>
+			)}
 		</div>
 	)
 }
