@@ -5,14 +5,18 @@ import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
 } from '@/components/ui/carousel'
 import Image from 'next/image'
 import Autoplay from 'embla-carousel-autoplay'
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 
 const HeroSection: FC = () => {
 	return (
 		<div className='w-full bg-red-500'>
 			<Carousel
+				className='relative'
 				plugins={[
 					Autoplay({
 						delay: 2000,
@@ -53,6 +57,12 @@ const HeroSection: FC = () => {
 						/>
 					</CarouselItem>
 				</CarouselContent>
+				<CarouselPrevious className='absolute left-28 -translate-y-1/2 z-50 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900 w-16 h-16 text-3xl'>
+					<MdKeyboardArrowLeft size={32} />
+				</CarouselPrevious>
+				<CarouselNext className='absolute right-28 -translate-y-1/2 z-50 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900 w-16 h-16 text-3xl'>
+					<MdKeyboardArrowRight size={32} />
+				</CarouselNext>
 			</Carousel>
 		</div>
 	)
