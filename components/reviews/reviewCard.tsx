@@ -3,6 +3,7 @@ import { FaStar } from 'react-icons/fa'
 import { MdVerified } from 'react-icons/md'
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa6'
 import Image from 'next/image'
+import Stars from '../stars'
 
 type ImageData = {
 	id: string
@@ -29,15 +30,10 @@ const ReviewCard: FC<Review> = ({
 	description,
 	images,
 }) => {
-	const getStars = (count: number) =>
-		Array.from({ length: count }, (_, index) => <FaStar key={index} />)
-
 	return (
 		<div id={id} className='gap-3 py-6 sm:flex sm:items-start'>
 			<div className='shrink-0 space-y-2 sm:w-48 md:w-72'>
-				<div className='flex items-center gap-0.5 text-yellow-300'>
-					{getStars(stars)}
-				</div>
+				<Stars count={stars} />
 
 				<div className='space-y-0.5'>
 					<p className='text-base font-semibold text-gray-900 dark:text-white'>
