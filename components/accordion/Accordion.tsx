@@ -34,7 +34,7 @@ const Accordion: FC<Props> = ({ items, type }) => {
 					...prev,
 					[id]: !prev[id],
 				}))
-			else setCurrentOpenAccordion(id)
+			else setCurrentOpenAccordion((prev) => (prev === id ? '' : id))
 		},
 		[type],
 	)
