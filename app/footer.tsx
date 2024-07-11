@@ -110,12 +110,12 @@ const Footer: FC = () => {
 					</div>
 
 					{/* News letter subscription */}
-					<div className='flex-1 w-full px-4'>
+					<div className='flex-1 lg:min-w-80 w-full px-4'>
 						<h2 className='title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3'>
 							SUBSCRIBE
 						</h2>
-						<div className='flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start'>
-							<div className='relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2'>
+						<div className='w-full flex gap-2 justify-center items-end md:justify-start'>
+							<div className='relative w-full min-w-40 sm:max-w-80'>
 								<label
 									htmlFor='footer-field'
 									className='leading-7 text-sm text-gray-600 dark:text-gray-400'></label>
